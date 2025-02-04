@@ -1,4 +1,5 @@
 import express from 'express';
+import User from "../models/users.model.js";
 
 export const signUp = (req, res) => {
     res.status(201).send("Sign up route");
