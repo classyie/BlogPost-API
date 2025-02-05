@@ -1,4 +1,3 @@
-```markdown
 # Blog API
 
 ## Overview
