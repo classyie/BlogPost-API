@@ -1,7 +1,7 @@
 import express from 'express';
 import User from "../models/users.model.js";
 import bcrypt from "bcrypt";
-import {generateToken} from  "../lib/utils.js";
+import { generateToken } from "../lib/utils.js";
 
 
 export const signUp = async (req, res) => {
@@ -37,16 +37,16 @@ export const login = async (req, res) => {
         return res.status(400).json({ message: "Please enter a valid email and a password" });
     }
     try {
-        const fetchedUser = await User.findOne({ email });
-        if (!fetchedUser) {
+        const user = await User.findOne({ email });
+        if (!user) {
             return res.status(400).json({ message: "User not found" });
         }
-        const isValid = await bcrypt.compare(password, fetchedUser.password);
+        const isValid = await bcrypt.compare(password, user.password);
         if (!isValid) {
             return res.status(400).json({ message: "Invalid credentials" });
         }
-        generateToken(fetchedUser._id, res);
-        res.json({ message: "Logged in successfully", user: fetchedUser });
+        generateToken(user._id, res);
+        res.json({ message: "Logged in successfully", user: user });
     } catch (error) {
         res.status(500).json({ message: "Server error", error: error.message });
     }
