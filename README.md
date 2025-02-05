@@ -1,5 +1,3 @@
-Thanks for the clarification! Here's the updated `README.md` for your Blog API:
-
 ```markdown
 # Blog API
 
@@ -59,7 +57,7 @@ JWT_SECRET=<your-jwt-secret-key>
 Start the server with:
 
 ```bash
-npm start
+npm run dev
 ```
 
 The server will run on port `5001` (or the port you specify in `.env`).
@@ -118,5 +116,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Feel free to reach out if you have any questions!
 ```
-
-This should make your Blog API repository look neat and professional for anyone browsing or contributing to it! Let me know if you'd like to add or modify anything.
