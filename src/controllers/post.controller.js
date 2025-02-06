@@ -18,7 +18,7 @@ export const createPost = async (req, res) => {
         return res.status(400).send({ message: "Title and content are required." });
     }
     try{
-        const newPost = new Post({ title, content, user: user._id });
+        const newPost = new Post({ title, content, author: user._id });
         await newPost.save();
         res.status(201).send({message: "Post created successfully", post: newPost});
     }
