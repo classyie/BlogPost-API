@@ -1,5 +1,5 @@
 
-# Blog API
+# Blog Post API
 
 ## Overview
 
@@ -40,7 +40,7 @@ git clone https://github.com/harshitS2/BlogPost-API.git
 ### 2. Install dependencies
 
 ```bash
-cd blog-api
+cd BlogPost-API
 npm install
 ```
 
@@ -167,7 +167,7 @@ The server will run on port `5001` (or the port you specify in `.env`).
 ## Folder Structure
 
 ```plaintext
-blog-api/
+BlogPost-API/
 │
 ├── controllers/
 │   ├── post.controller.js      # Handles post-related logic (CRUD operations)
