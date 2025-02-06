@@ -34,7 +34,7 @@ This is a RESTful API for managing a simple blog platform. The API allows users 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/blog-api.git
+git clone https://github.com/harshitS2/BlogPost-API.git
 ```
 
 ### 2. Install dependencies
